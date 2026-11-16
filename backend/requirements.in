@@ -1,0 +1,15 @@
+# Direct dependencies. requirements.txt records the exact installed versions.
+# API server, ORM, validation and local environment configuration
+fastapi>=0.115,<1
+uvicorn>=0.35,<1
+SQLAlchemy>=2.0,<3
+pydantic>=2.12,<3
+pydantic-settings>=2,<3
+python-dotenv>=1,<2
+
+# MySQL 8 driver; RSA extra supports caching_sha2_password authentication
+PyMySQL[rsa]>=1.1,<2
+
+# API and backend tests
+httpx>=0.28,<1
+pytest>=8,<10

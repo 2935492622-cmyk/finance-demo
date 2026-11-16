@@ -1,0 +1,144 @@
+{
+  "scenario": "Actual browser form creates income and expense; real MySQL cross-check; records retained for user preview",
+  "run_marker": "qa-demo-a91b49f0-4bc",
+  "baseline": {
+    "total_income": "0.00",
+    "total_expense": "0.00",
+    "balance": "0.00",
+    "transaction_count": 0
+  },
+  "expected_after_page_writes": {
+    "total_income": "1000.00",
+    "total_expense": "125.50",
+    "balance": "874.50",
+    "transaction_count": 2
+  },
+  "page_created_records": [
+    {
+      "id": 27,
+      "amount": "1000.00",
+      "type": "income",
+      "category": "工资",
+      "note": "qa-demo-a91b49f0-4bc-income",
+      "transaction_date": "2026-11-15",
+      "created_at": "2026-11-16T03:13:59.146499Z",
+      "updated_at": "2026-11-16T03:13:59.146499Z"
+    },
+    {
+      "id": 28,
+      "amount": "125.50",
+      "type": "expense",
+      "category": "餐饮",
+      "note": "qa-demo-a91b49f0-4bc-expense",
+      "transaction_date": "2026-11-15",
+      "created_at": "2026-11-16T03:13:59.329151Z",
+      "updated_at": "2026-11-16T03:13:59.329151Z"
+    }
+  ],
+  "page_post_count": 2,
+  "browser_refresh_verified": true,
+  "sql_before_restart": {
+    "database": "finance_demo",
+    "mysql_version": "8.4.13",
+    "verified_demo_records": [
+      {
+        "id": 27,
+        "amount": "1000.00",
+        "type": "income",
+        "category": "工资",
+        "note": "qa-demo-a91b49f0-4bc-income",
+        "transaction_date": "2026-11-15",
+        "created_at": "2026-11-16T03:13:59.146499Z",
+        "updated_at": "2026-11-16T03:13:59.146499Z",
+        "amount_python_type": "Decimal"
+      },
+      {
+        "id": 28,
+        "amount": "125.50",
+        "type": "expense",
+        "category": "餐饮",
+        "note": "qa-demo-a91b49f0-4bc-expense",
+        "transaction_date": "2026-11-15",
+        "created_at": "2026-11-16T03:13:59.329151Z",
+        "updated_at": "2026-11-16T03:13:59.329151Z",
+        "amount_python_type": "Decimal"
+      }
+    ],
+    "sql_totals": {
+      "transaction_count": 2,
+      "total_income": "1000.00",
+      "total_expense": "125.50",
+      "balance": "874.50"
+    }
+  },
+  "screenshots": [
+    "screenshots/p0-desktop-success.png",
+    "screenshots/p0-mobile-success.png"
+  ],
+  "completed_before_restart_at": "2026-11-16T03:14:00.245Z",
+  "backend_restart_verified": true,
+  "sql_after_restart": {
+    "database": "finance_demo",
+    "mysql_version": "8.4.13",
+    "verified_demo_records": [
+      {
+        "id": 27,
+        "amount": "1000.00",
+        "type": "income",
+        "category": "工资",
+        "note": "qa-demo-a91b49f0-4bc-income",
+        "transaction_date": "2026-11-15",
+        "created_at": "2026-11-16T03:13:59.146499Z",
+        "updated_at": "2026-11-16T03:13:59.146499Z",
+        "amount_python_type": "Decimal"
+      },
+      {
+        "id": 28,
+        "amount": "125.50",
+        "type": "expense",
+        "category": "餐饮",
+        "note": "qa-demo-a91b49f0-4bc-expense",
+        "transaction_date": "2026-11-15",
+        "created_at": "2026-11-16T03:13:59.329151Z",
+        "updated_at": "2026-11-16T03:13:59.329151Z",
+        "amount_python_type": "Decimal"
+      }
+    ],
+    "sql_totals": {
+      "transaction_count": 2,
+      "total_income": "1000.00",
+      "total_expense": "125.50",
+      "balance": "874.50"
+    }
+  },
+  "summary_after_restart": {
+    "total_income": "1000.00",
+    "total_expense": "125.50",
+    "balance": "874.50",
+    "transaction_count": 2,
+    "expense_by_category": [
+      {
+        "category": "餐饮",
+        "amount": "125.50"
+      }
+    ]
+  },
+  "screenshots_after_restart": [
+    "screenshots/p0-desktop-after-restart.png",
+    "screenshots/p0-mobile-after-restart.png"
+  ],
+  "completed_after_restart_at": "2026-11-16T03:18:44.889Z",
+  "mobile_readability_after_restart": {
+    "amountLines": [
+      1,
+      1,
+      1
+    ],
+    "noteLines": [
+      0.9993489583333333,
+      0.9993489583333333
+    ],
+    "tableWidth": 620,
+    "viewportWidth": 390
+  }
+}

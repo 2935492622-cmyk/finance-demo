@@ -1,0 +1,18 @@
+{
+  "scenario": "P0 actual database-unavailable UI; successful CRUD and persistence NOT tested",
+  "started_at": "2026-11-16T02:19:34.234Z",
+  "checks": [
+    "Real API health=503, page=200; visible failure, unknown totals, no fake empty success",
+    "Amount with three decimal places rejected visibly before HTTP write",
+    "Real POST=503; 12.3 serialized as 12.30; double submit suppressed; input retained; no success notice",
+    "Write result unconfirmed after 503; form locked; failed refresh keeps lock without retrying POST",
+    "390px narrow layout has no document horizontal overflow; form remains visible",
+    "No uncaught page JavaScript exceptions"
+  ],
+  "screenshots": [
+    "screenshots/p0-desktop-database-unavailable.png",
+    "screenshots/p0-mobile-database-unavailable.png"
+  ],
+  "finished_at": "2026-11-16T02:19:35.359Z",
+  "status": "passed: database-unavailable smoke only"
+}

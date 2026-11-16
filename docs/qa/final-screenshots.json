@@ -1,0 +1,22 @@
+{
+  "scenario": "Read-only final screenshots after P1 QA cleanup",
+  "summary": {
+    "total_income": "1000.00",
+    "total_expense": "125.50",
+    "balance": "874.50",
+    "transaction_count": 2,
+    "expense_by_category": [
+      {
+        "category": "餐饮",
+        "amount": "125.50"
+      }
+    ]
+  },
+  "screenshots": [
+    "screenshots/p1-final-desktop.png",
+    "screenshots/p1-final-mobile390.png",
+    "screenshots/p1-final-mobile320.png"
+  ],
+  "writes": 0,
+  "completed_at": "2026-11-16T03:38:22.554Z"
+}

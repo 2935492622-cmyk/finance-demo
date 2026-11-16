@@ -1,0 +1,176 @@
+{
+  "scenario": "Real page P1 edit/delete/filter/ECharts acceptance",
+  "run_marker": "qa-p1-fe348edf",
+  "started_at": "2026-11-16T03:37:22.529Z",
+  "checks": [
+    "Four actual page-created records with independent IDs; P0 demo IDs excluded",
+    "Combined exact filters include date endpoints; list/summary/chart match; income/empty chart states; invalid range stays local; clear restores all",
+    "Two immediate real filter submissions leave only the latest category/list/summary/chart snapshot",
+    "Edit prefill/cancel sends no PUT; full page PUT changes fields and survives reload; SQL and readonly identity/time match",
+    "Delete cancel sends no request; confirmed page DELETE=204 empty; SQL absence and summary/chart update",
+    "ECharts actual SVG instance data/legend match real summary; resize works at390/320; amounts single-line and document has no overflow",
+    "No uncaught page JavaScript errors"
+  ],
+  "screenshots": [
+    "screenshots/p1-filtered.png",
+    "screenshots/p1-empty-chart.png",
+    "screenshots/p1-editing.png",
+    "screenshots/p1-desktop.png",
+    "screenshots/p1-mobile390.png",
+    "screenshots/p1-mobile320.png",
+    "screenshots/p1-final-desktop.png"
+  ],
+  "last_chart": {
+    "data": [
+      {
+        "category": "餐饮",
+        "amount": "125.50"
+      },
+      {
+        "category": "qa-p1-fe348edf-交通",
+        "amount": "30.00"
+      }
+    ],
+    "width": 252,
+    "height": 210,
+    "containerWidth": 252,
+    "svgWidth": 252,
+    "svgHeight": 210,
+    "largestPathWidth": 163.80001831054688,
+    "largestPathHeight": 163.697265625,
+    "groups": 2
+  },
+  "sql_after_edit": {
+    "database": "finance_demo",
+    "verified_records": [
+      {
+        "id": 105,
+        "amount": "22.75",
+        "type": "income",
+        "category": "qa-p1-fe348edf-餐饮-edited",
+        "note": "qa-p1-fe348edf-edited",
+        "transaction_date": "2040-01-04",
+        "created_at": "2026-11-16T03:37:23.587420Z",
+        "updated_at": "2026-11-16T03:37:25.825573Z"
+      },
+      {
+        "id": 106,
+        "amount": "30.00",
+        "type": "expense",
+        "category": "qa-p1-fe348edf-交通",
+        "note": "qa-p1-fe348edf-b",
+        "transaction_date": "2040-01-02",
+        "created_at": "2026-11-16T03:37:23.787742Z",
+        "updated_at": "2026-11-16T03:37:23.787742Z"
+      },
+      {
+        "id": 107,
+        "amount": "100.00",
+        "type": "income",
+        "category": "qa-p1-fe348edf-餐饮",
+        "note": "qa-p1-fe348edf-c",
+        "transaction_date": "2040-01-02",
+        "created_at": "2026-11-16T03:37:23.955141Z",
+        "updated_at": "2026-11-16T03:37:23.955141Z"
+      },
+      {
+        "id": 108,
+        "amount": "4.50",
+        "type": "expense",
+        "category": "qa-p1-fe348edf-餐饮",
+        "note": "qa-p1-fe348edf-d",
+        "transaction_date": "2040-01-03",
+        "created_at": "2026-11-16T03:37:24.121605Z",
+        "updated_at": "2026-11-16T03:37:24.121605Z"
+      }
+    ],
+    "protected_ids_unchanged": [
+      27,
+      28
+    ],
+    "cleaned_ids": []
+  },
+  "sql_after_delete": {
+    "database": "finance_demo",
+    "verified_records": [
+      {
+        "id": 105,
+        "amount": "22.75",
+        "type": "income",
+        "category": "qa-p1-fe348edf-餐饮-edited",
+        "note": "qa-p1-fe348edf-edited",
+        "transaction_date": "2040-01-04",
+        "created_at": "2026-11-16T03:37:23.587420Z",
+        "updated_at": "2026-11-16T03:37:25.825573Z"
+      },
+      {
+        "id": 106,
+        "amount": "30.00",
+        "type": "expense",
+        "category": "qa-p1-fe348edf-交通",
+        "note": "qa-p1-fe348edf-b",
+        "transaction_date": "2040-01-02",
+        "created_at": "2026-11-16T03:37:23.787742Z",
+        "updated_at": "2026-11-16T03:37:23.787742Z"
+      },
+      {
+        "id": 107,
+        "amount": "100.00",
+        "type": "income",
+        "category": "qa-p1-fe348edf-餐饮",
+        "note": "qa-p1-fe348edf-c",
+        "transaction_date": "2040-01-02",
+        "created_at": "2026-11-16T03:37:23.955141Z",
+        "updated_at": "2026-11-16T03:37:23.955141Z"
+      },
+      {
+        "id": 108,
+        "deleted": true
+      }
+    ],
+    "protected_ids_unchanged": [
+      27,
+      28
+    ],
+    "cleaned_ids": []
+  },
+  "mobile": [
+    {
+      "width": 390,
+      "overflow": false,
+      "moneyLines": [
+        1,
+        1,
+        1
+      ],
+      "chartWidth": 308,
+      "tableWidth": 700
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "moneyLines": [
+        1,
+        1,
+        1
+      ],
+      "chartWidth": 252,
+      "tableWidth": 700
+    }
+  ],
+  "status": "passed",
+  "cleanup": {
+    "database": "finance_demo",
+    "verified_records": [],
+    "protected_ids_unchanged": [
+      27,
+      28
+    ],
+    "cleaned_ids": [
+      105,
+      106,
+      107
+    ]
+  },
+  "finished_at": "2026-11-16T03:37:28.034Z"
+}

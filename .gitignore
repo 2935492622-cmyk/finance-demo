@@ -1,0 +1,30 @@
+# Project-local Python environment and generated files
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Project-local Node dependencies and build output
+node_modules/
+frontend/dist/
+frontend/.npm-cache/
+
+# Project-local browser runtime used for QA; never install into the OS
+.tools/
+
+# Local secrets; retain safe templates
+.env
+.env.*
+!.env.example
+
+# Generated logs and test output
+*.log
+coverage/
+htmlcov/
+.coverage
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
