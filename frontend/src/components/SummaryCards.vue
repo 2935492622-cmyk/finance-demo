@@ -3,9 +3,9 @@ import { formatMoney } from '../utils/money.js'
 import AppIcon from './AppIcon.vue'
 defineProps({ summary: { type: Object, default: null }, loading: Boolean, stale: Boolean })
 const cards = [
-  { key: 'total_income', label: '总收入', icon: 'arrowIn', theme: 'income', caption: '每一份努力，都算数' },
-  { key: 'total_expense', label: '总支出', icon: 'arrowOut', theme: 'expense', caption: '生活里的每一笔花费' },
-  { key: 'balance', label: '当前结余', icon: 'wallet', theme: 'balance', caption: '收入减去支出，心里有数' },
+  { key: 'total_income', label: '总收入', icon: 'arrowIn', theme: 'income', caption: '当前范围内的收入合计' },
+  { key: 'total_expense', label: '总支出', icon: 'arrowOut', theme: 'expense', caption: '当前范围内的支出合计' },
+  { key: 'balance', label: '当前结余', icon: 'wallet', theme: 'balance', caption: '当前范围 · 收入 − 支出' },
 ]
 </script>
 

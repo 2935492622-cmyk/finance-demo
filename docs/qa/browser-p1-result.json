@@ -1,7 +1,7 @@
 {
   "scenario": "Real page P1 edit/delete/filter/ECharts acceptance",
-  "run_marker": "qa-p1-fe348edf",
-  "started_at": "2026-11-16T03:37:22.529Z",
+  "run_marker": "qa-p1-1a6a9743",
+  "started_at": "2026-11-17T11:55:13.700Z",
   "checks": [
     "Four actual page-created records with independent IDs; P0 demo IDs excluded",
     "Combined exact filters include date endpoints; list/summary/chart match; income/empty chart states; invalid range stays local; clear restores all",
@@ -27,66 +27,73 @@
         "amount": "125.50"
       },
       {
-        "category": "qa-p1-fe348edf-交通",
+        "category": "其他",
+        "amount": "100.00"
+      },
+      {
+        "category": "qa-p1-1a6a9743-交通",
         "amount": "30.00"
       }
     ],
-    "width": 252,
-    "height": 210,
-    "containerWidth": 252,
-    "svgWidth": 252,
-    "svgHeight": 210,
-    "largestPathWidth": 163.80001831054688,
-    "largestPathHeight": 163.697265625,
-    "groups": 2
+    "width": 260,
+    "height": 215,
+    "containerWidth": 260,
+    "svgWidth": 260,
+    "svgHeight": 215,
+    "largestPathWidth": 99.55503845214844,
+    "largestPathHeight": 188.5074462890625,
+    "groups": 3
   },
   "sql_after_edit": {
     "database": "finance_demo",
     "verified_records": [
       {
-        "id": 105,
+        "id": 148,
         "amount": "22.75",
         "type": "income",
-        "category": "qa-p1-fe348edf-餐饮-edited",
-        "note": "qa-p1-fe348edf-edited",
+        "category": "qa-p1-1a6a9743-餐饮-edited",
+        "note": "qa-p1-1a6a9743-edited",
         "transaction_date": "2040-01-04",
-        "created_at": "2026-11-16T03:37:23.587420Z",
-        "updated_at": "2026-11-16T03:37:25.825573Z"
+        "created_at": "2026-11-17T11:55:14.782995Z",
+        "updated_at": "2026-11-17T11:55:16.736584Z"
       },
       {
-        "id": 106,
+        "id": 149,
         "amount": "30.00",
         "type": "expense",
-        "category": "qa-p1-fe348edf-交通",
-        "note": "qa-p1-fe348edf-b",
+        "category": "qa-p1-1a6a9743-交通",
+        "note": "qa-p1-1a6a9743-b",
         "transaction_date": "2040-01-02",
-        "created_at": "2026-11-16T03:37:23.787742Z",
-        "updated_at": "2026-11-16T03:37:23.787742Z"
+        "created_at": "2026-11-17T11:55:14.982693Z",
+        "updated_at": "2026-11-17T11:55:14.982693Z"
       },
       {
-        "id": 107,
+        "id": 150,
         "amount": "100.00",
         "type": "income",
-        "category": "qa-p1-fe348edf-餐饮",
-        "note": "qa-p1-fe348edf-c",
+        "category": "qa-p1-1a6a9743-餐饮",
+        "note": "qa-p1-1a6a9743-c",
         "transaction_date": "2040-01-02",
-        "created_at": "2026-11-16T03:37:23.955141Z",
-        "updated_at": "2026-11-16T03:37:23.955141Z"
+        "created_at": "2026-11-17T11:55:15.166238Z",
+        "updated_at": "2026-11-17T11:55:15.166238Z"
       },
       {
-        "id": 108,
+        "id": 151,
         "amount": "4.50",
         "type": "expense",
-        "category": "qa-p1-fe348edf-餐饮",
-        "note": "qa-p1-fe348edf-d",
+        "category": "qa-p1-1a6a9743-餐饮",
+        "note": "qa-p1-1a6a9743-d",
         "transaction_date": "2040-01-03",
-        "created_at": "2026-11-16T03:37:24.121605Z",
-        "updated_at": "2026-11-16T03:37:24.121605Z"
+        "created_at": "2026-11-17T11:55:15.332623Z",
+        "updated_at": "2026-11-17T11:55:15.332623Z"
       }
     ],
     "protected_ids_unchanged": [
       27,
-      28
+      28,
+      145,
+      146,
+      147
     ],
     "cleaned_ids": []
   },
@@ -94,43 +101,46 @@
     "database": "finance_demo",
     "verified_records": [
       {
-        "id": 105,
+        "id": 148,
         "amount": "22.75",
         "type": "income",
-        "category": "qa-p1-fe348edf-餐饮-edited",
-        "note": "qa-p1-fe348edf-edited",
+        "category": "qa-p1-1a6a9743-餐饮-edited",
+        "note": "qa-p1-1a6a9743-edited",
         "transaction_date": "2040-01-04",
-        "created_at": "2026-11-16T03:37:23.587420Z",
-        "updated_at": "2026-11-16T03:37:25.825573Z"
+        "created_at": "2026-11-17T11:55:14.782995Z",
+        "updated_at": "2026-11-17T11:55:16.736584Z"
       },
       {
-        "id": 106,
+        "id": 149,
         "amount": "30.00",
         "type": "expense",
-        "category": "qa-p1-fe348edf-交通",
-        "note": "qa-p1-fe348edf-b",
+        "category": "qa-p1-1a6a9743-交通",
+        "note": "qa-p1-1a6a9743-b",
         "transaction_date": "2040-01-02",
-        "created_at": "2026-11-16T03:37:23.787742Z",
-        "updated_at": "2026-11-16T03:37:23.787742Z"
+        "created_at": "2026-11-17T11:55:14.982693Z",
+        "updated_at": "2026-11-17T11:55:14.982693Z"
       },
       {
-        "id": 107,
+        "id": 150,
         "amount": "100.00",
         "type": "income",
-        "category": "qa-p1-fe348edf-餐饮",
-        "note": "qa-p1-fe348edf-c",
+        "category": "qa-p1-1a6a9743-餐饮",
+        "note": "qa-p1-1a6a9743-c",
         "transaction_date": "2040-01-02",
-        "created_at": "2026-11-16T03:37:23.955141Z",
-        "updated_at": "2026-11-16T03:37:23.955141Z"
+        "created_at": "2026-11-17T11:55:15.166238Z",
+        "updated_at": "2026-11-17T11:55:15.166238Z"
       },
       {
-        "id": 108,
+        "id": 151,
         "deleted": true
       }
     ],
     "protected_ids_unchanged": [
       27,
-      28
+      28,
+      145,
+      146,
+      147
     ],
     "cleaned_ids": []
   },
@@ -143,8 +153,8 @@
         1,
         1
       ],
-      "chartWidth": 308,
-      "tableWidth": 700
+      "chartWidth": 285,
+      "tableWidth": 660
     },
     {
       "width": 320,
@@ -154,8 +164,8 @@
         1,
         1
       ],
-      "chartWidth": 252,
-      "tableWidth": 700
+      "chartWidth": 260,
+      "tableWidth": 660
     }
   ],
   "status": "passed",
@@ -164,13 +174,16 @@
     "verified_records": [],
     "protected_ids_unchanged": [
       27,
-      28
+      28,
+      145,
+      146,
+      147
     ],
     "cleaned_ids": [
-      105,
-      106,
-      107
+      148,
+      149,
+      150
     ]
   },
-  "finished_at": "2026-11-16T03:37:28.034Z"
+  "finished_at": "2026-11-17T11:55:19.130Z"
 }

@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "Real chart points match daily cumulative balances and API summary for all, income-only, expense-only and empty filters; empty charts recover after clearing",
+    "All four sidebar anchors select the correct section at desktop/390/320; entry navigation focuses amount",
+    "No POST, PUT or DELETE sent during this check"
+  ],
+  "date": "2026-11-17",
+  "mode": "Real local API, read-only; no interception or database mutation",
+  "status": "passed"
+}

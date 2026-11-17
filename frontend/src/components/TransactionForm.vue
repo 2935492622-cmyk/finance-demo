@@ -39,7 +39,7 @@ defineExpose({ reset })
 </script>
 
 <template>
-  <section class="panel entry-panel" aria-labelledby="entry-title">
+  <section id="entry" class="panel entry-panel" aria-labelledby="entry-title">
     <div class="panel-heading"><span class="section-icon"><AppIcon :name="record ? 'edit' : 'plus'" /></span><div><h2 id="entry-title">{{ record ? '编辑记录' : '记一笔' }}</h2><p>{{ record ? `正在编辑第 ${record.id} 笔记录` : '把今天的收支，认真记下来' }}</p></div></div>
     <form novalidate @submit.prevent="submit">
       <fieldset :disabled="saving || locked" class="form-fields">

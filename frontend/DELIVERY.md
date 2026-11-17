@@ -1,5 +1,19 @@
 # frontend-developer 交付报告
 
+## 2026-11-17 收支概览布局调整
+
+由主 Agent 按用户参考图完成本轮修改，未派发子 Agent。沿用 Vue、Axios、ECharts 和所有 API / 写入行为，未增加依赖。
+
+- `src/App.vue`：灰绿侧栏和分区导航，标题工具栏，统计 / 筛选 / 走势图 / 环图 / 明细 / 记账分区；记账入口聚焦金额，编辑仍回填原表单。
+- `src/styles/main.css`：统一白底细边框、紧凑留白、低饱和色彩；桌面分栏与移动端横排导航，表格局部横向滚动。
+- `components/BalanceTrend.vue`、`utils/trend.js`：按当前记录日期累计收入减支出，以 BigInt 整数分保留精度，图形使用 ECharts 折线，提供精确数据展开列表、空状态和过期提示。
+- `components/ExpenseChart.vue`、`utils/chart.js`：环图居中合计、与图形对应的彩色图例；`SummaryCards.vue` 调整统计口径文案；`TransactionForm.vue` 增加导航锚点。
+- `tests/trend.test.js`：新增同日聚合、日期排序、负数、超安全整数精度、空和单日期数据测试。
+
+启动仍为 `cd frontend && npm run dev`，后端和 MySQL 沿用 README 配置。实际 `npm test` 为 **29 / 29**，`npm run build` 通过；既有真实 P1 浏览器验收全部通过，新增 / 编辑 / 删除 / 筛选 / 刷新及 SQL 验证完成，测试数据按明确 ID 清理。8 种视口宽度均未出现文档横向溢出，两张图表 SVG 实际可见。证据、截图及本轮验证限制见 [布局调整报告](../docs/qa/REDESIGN_REPORT.md)。
+
+以下内容为 2026-11-16 的原始模块交付记录。
+
 日期：2026-11-16。对应任务：FE-01、FE-02、FE-03、FE-04。状态：P0 / P1 已由 QA 独立验收并经主 Agent 复核通过；移动端缺陷 QA-P0-002 已复测关闭。前端 26 项单测与构建由主 Agent 独立复跑通过。最终实测证据见 [QA P1 测试报告](../docs/qa/P1_TEST_REPORT.md)和 [P0 测试报告](../docs/qa/TEST_REPORT.md)。
 
 ## 完成内容

@@ -59,6 +59,8 @@ flowchart LR
 
 ## 数据流与精度
 
+2026-11-17 前端布局调整：`App.vue` 装配侧栏锚点、统计、筛选、两张图表、明细和表单。新增异步组件 `BalanceTrend.vue`，从现有完整列表快照生成按日期累计的收支差额，`utils/trend.js` 使用 BigInt 整数分聚合；原始十进制文本用于提示和可展开的日期金额列表，仅图形绘制转 Number。分类环图与走势共用已有 ECharts 按需依赖，不增加接口、数据库表或依赖。
+
 1. 浏览器验证表单并把金额规范化为两位小数字符串。
 2. FastAPI / Pydantic 再次验证全部数据，转换 Decimal。
 3. SQLAlchemy 使用参数化 SQL 写入 DECIMAL；成功提交后返回只读 ID 与 UTC 时间。
